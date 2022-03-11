@@ -35,7 +35,12 @@ fun main(args: Array<String>) {
       println("Area of a circle = "+ calcCircleArea(r))
     }
 
-
+    //C -> F and C -> K
+    5 -> {
+      println("Insert the centigrades to convert")
+      var c:Double = reader.nextDouble()
+      convertCentigrades(c)
+    }
     
     else -> { // Note the block
         print("Warning: The option is no between 1-5")
@@ -46,8 +51,6 @@ fun main(args: Array<String>) {
 
 
 fun calcFibonacci(): Sequence<Int> {
-    // fibonacci terms
-    // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, ...
     return generateSequence(Pair(0, 1), { Pair(it.second, it.first + it.second) }).map { it.first }
 }
 
@@ -66,5 +69,8 @@ fun calcCircleArea(radius: Double): Double {
     return PI * radius * radius
 }
 
-
+fun convertCentigrades(cent: Double) {
+    println("C -> K = "+ cent + 273.15)
+    println("C -> F "+ (1.8 * cent + 32))
+}
 
