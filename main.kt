@@ -1,3 +1,9 @@
+/*
+Authors:
+Carlos Ayala
+Liliana Esmeral
+*/
+
 import java.util.Scanner
 
 fun main(args: Array<String>) {
