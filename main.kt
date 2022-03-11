@@ -10,24 +10,33 @@ fun main(args: Array<String>) {
   // nextInt() reads the next integer from the keyboard
   var opt:Int = reader.nextInt()
   when (opt) {
-  
+    // Fibonacci
     1 -> {
       println("Insert the fibonaccia numbers that you want")
       var n:Int = reader.nextInt()
       println("Fibonaccia = " + calcFibonacci().take(n).toList())
     }
-    
+    // Sumatory
     2 -> {
       println("Insert the sumatory number that you want")
       var n:Int = reader.nextInt()
       print("Sumatory = " + ((n*(n+1))/2) )
     }
-
+    // Prime numers
     3 -> {
       println("Insert the prime numbers that you want")
       var n:Int = reader.nextInt()
       println("Prime numers = "+ getPrimeNumbers().take(n).joinToString(", "))
     }
+    //Area of circle
+    4 -> {
+      println("Insert the radious to calculate the area")
+      var r:Double = reader.nextDouble()
+      println("Area of a circle = "+ calcCircleArea(r))
+    }
+
+
+    
     else -> { // Note the block
         print("Warning: The option is no between 1-5")
     }
@@ -51,5 +60,11 @@ fun getPrimeNumbers(): Sequence<Long> {
             .forEach { yield(it) }
     }
 }
+
+fun calcCircleArea(radius: Double): Double {
+    val PI = 3.14
+    return PI * radius * radius
+}
+
 
 
