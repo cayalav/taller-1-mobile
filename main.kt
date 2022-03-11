@@ -70,7 +70,7 @@ fun calcCircleArea(radius: Double): Double {
 }
 
 fun convertCentigrades(cent: Double) {
-    println("C -> K = "+ cent + 273.15)
+    println("C -> K = "+ (cent + 273.15))
     println("C -> F "+ (1.8 * cent + 32))
 }
 
