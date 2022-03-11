@@ -1,12 +1,18 @@
 import java.util.Scanner
 
 fun main(args: Array<String>) {
+
+
+  do {
+    println("Welcome to the Kotlin Challenge #1!")
+    println("Option #1 = Fibonacci")
+    println("Option #2 = Sumatory")
+    println("Option #3 = PrimeNum")
+    println("Option #4 = CircularArea")
+    println("Option #5 = Centigrades")
+    val reader = Scanner(System.`in`)
+    print("Enter a option between 1-5, '0' to exit: ")
   
-  println("Welcome to the Kotlin Challenge #1!")
-  
-  println("Option #1 = Fibonacci")
-  val reader = Scanner(System.`in`)
-  print("Enter a option between 1-5: ")
   // nextInt() reads the next integer from the keyboard
   var opt:Int = reader.nextInt()
   when (opt) {
@@ -47,6 +53,7 @@ fun main(args: Array<String>) {
     }
   
   }
+  } while (opt != 0)
 }
 
 
